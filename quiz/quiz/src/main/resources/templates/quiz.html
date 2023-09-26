@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="quiz_container" id=>
+    <div class="question_container">
+        <h2 id="question">Question</h2>
+        <ul>
+            <li>
+                <input type="radio" class="answer" id="a" name="answer">
+                <label id="a_text" for="a">answer</label>
+            </li>
+            <li>
+                <input type="radio" class="answer" id="b" name="answer">
+                <label id="b_text" for="b">answer</label>
+            </li>
+            <li>
+                <input type="radio" class="answer" id="c" name="answer">
+                <label id="c_text" for="c">answer</label>
+            </li>
+            <li>
+                <input type="radio" class="answer" id="d" name="answer">
+                <label id="d_text" for="d">answer</label>
+            </li>
+
+        </ul>
+    </div>
+    <button id="submit">submit</button>
+
+</div>
+</body>
+</html>
