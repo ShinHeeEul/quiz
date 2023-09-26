@@ -23,7 +23,7 @@ jobs:
           distribution: 'temurin'
       - name: Build with Gradle
         run: ./gradlew build
-        working-directory: BackEnd/FourEver/
+        working-directory: quiz/quiz/
 
   deploy:
     runs-on: ubuntu-latest
@@ -39,12 +39,12 @@ jobs:
 
       - name: Grant execute permisson for gradlew
         run: chmod +x gradlew
-        working-directory: BackEnd/FourEver/
+        working-directory: quiz/quiz/
 
       - name: Build with Gradle (without Test)
         run: ./gradlew build
-        working-directory: BackEnd/FourEver/
-
+        working-directory: quiz/quiz/
+        
       - name: Docker Hub login
         uses: docker/login-action@v2
         with:
@@ -56,7 +56,7 @@ jobs:
           docker build -t ${{ secrets.DOCKER_NICKNAME }}/${{ secrets.DOCKER_BE_REPO }} .
           docker images
           docker push ${{ secrets.DOCKER_NICKNAME }}/${{ secrets.DOCKER_BE_REPO }}
-        working-directory: BackEnd/FourEver/
+        working-directory: quiz/quiz/
 
       - name: Deploy to Prod WAS Server
         uses: appleboy/ssh-action@master
