@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>quiz</title>
-    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
-</head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/default_layout">
 <body>
+
+<th:block layout:fragment="content">
 <div class="quiz_container" id=>
     <div class="question_container">
         <h2 id="question">Question</h2>
@@ -34,5 +31,6 @@
     <button id="submit">submit</button>
 
 </div>
+</th:block>
 </body>
 </html>
