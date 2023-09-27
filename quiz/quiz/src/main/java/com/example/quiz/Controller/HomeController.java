@@ -11,7 +11,7 @@ public class HomeController {
     //메인 화면 변경
     @GetMapping("/")
     public String home() {
-        return "quiz";
+        return "home";
     }
 
     //대분류 카테고리 접속
