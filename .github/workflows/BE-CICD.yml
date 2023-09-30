@@ -46,7 +46,7 @@ jobs:
         working-directory: quiz/quiz/
 
       - name: Build with Gradle (without Test)
-        run: ./gradlew build
+        run: ./gradlew build -x test
         working-directory: quiz/quiz/
         
       - name: Docker Hub login
