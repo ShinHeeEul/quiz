@@ -5,32 +5,25 @@
 <body>
 
 <th:block layout:fragment="content">
-<div class="quiz_container" id=>
-    <div class="question_container">
-        <h2 id="question">Question</h2>
-        <ul>
-            <li>
-                <input type="radio" class="answer" id="a" name="answer">
-                <label id="a_text" for="a">answer</label>
-            </li>
-            <li>
-                <input type="radio" class="answer" id="b" name="answer">
-                <label id="b_text" for="b">answer</label>
-            </li>
-            <li>
-                <input type="radio" class="answer" id="c" name="answer">
-                <label id="c_text" for="c">answer</label>
-            </li>
-            <li>
-                <input type="radio" class="answer" id="d" name="answer">
-                <label id="d_text" for="d">answer</label>
-            </li>
+    <div class="quiz_container" id=>
 
-        </ul>
+        <div>
+            <button id="move_left" th:if="${prev != -1}" th:onclick="|location.href='/quiz/${big}/${small}/${prev}'|">이전으로</button>
+            <button id="move_right" th:if="${next != -1}" th:onclick="|location.href='/quiz/${big}/${small}/${next}'|">다음으로</button>
+        </div>
+        <br/>
+        <br/>
+        <div class="question_container">
+            <h2 id="question" th:text="${num}">번호</h2>
+            <h3 th:text="${code}">코드</h3>
+            <div th:utext="${question}">질문</div>
+            <div th:utext="${selection}">선택지</div>
+            <details>
+                <summary id="answer">해설 보기</summary>
+                <div th:utext="${solution}">해설</div>
+            </details>
+        </div>
     </div>
-    <button id="submit">submit</button>
-
-</div>
 </th:block>
 </body>
 </html>

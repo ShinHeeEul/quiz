@@ -5,16 +5,17 @@
 <body>
 <th:block layout:fragment="content">
     <div class="context_container" id=>
-            <div class="content_container">
-                <h2 id="question">목 차</h2>
-                <ul>
-                    <li>
-                        <button th:onclick="|location.href='@{/quiz/1}'|">1. 퀴즈 풀기</button>
-                    </li>
-                </ul>
-            </div>
+        <div class="content_container">
+            <h2 id="question">카테고리</h2>
+            <ul>
+                <li>
+                    <th:block th:each="category : ${big}">
+                        <button th:onclick="|location.href='/main/${category.id}'|" th:text="${category.name}">1. 퀴즈 풀기</button>
+                    </th:block>
+                </li>
+            </ul>
+        </div>
     </div>
-
 </th:block>
 </body>
 </html>

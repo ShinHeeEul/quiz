@@ -21,6 +21,34 @@ body{
     justify-content: center;
 }
 
+#is_checked {
+    display:none;
+}
+
+#answer {
+    width:100%;
+    background-color: #1b2035;
+    color: white;
+    font-family: inherit;
+    display: block;
+    padding : 1.3rem;
+    border: none;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+#is_checked:checked ~ .solution {
+    display: block;
+}
+
+.solution {
+    display:none;
+}
+
+.selection{
+    display:none;
+}
+
 .quiz_container{
     width: 80%;
     background-color: white;
@@ -36,6 +64,15 @@ body{
     font-weight: bold;
     box-shadow:  0 0 10px 2px rgba(100 , 100, 100,0.1);
     overflow: hidden;
+}
+
+#move_right {
+    width: 45%;
+    float: right;
+}
+#move_left {
+    width: 45%;
+    float: left;
 }
 
 .content_container{
@@ -76,6 +113,7 @@ button{
     display: block;
     padding : 1.3rem;
     border: none;
+    margin: 1.1rem;
     font-size: 1.1rem;
 }
 button:hover{
