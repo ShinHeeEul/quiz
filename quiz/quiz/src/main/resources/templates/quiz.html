@@ -6,7 +6,6 @@
 
 <th:block layout:fragment="content">
     <div class="quiz_container" id=>
-
         <div>
             <button id="move_left" th:if="${prev != -1}" th:onclick="|location.href='/quiz/${big}/${small}/${prev}'|">이전으로</button>
             <button id="move_right" th:if="${next != -1}" th:onclick="|location.href='/quiz/${big}/${small}/${next}'|">다음으로</button>

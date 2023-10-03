@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="headerFragment">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SeseQuiz</title>
+        <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"/>
+    </head>
+</th:block>
+</html>
+<body style="overflow: auto;">
+<div id="__next">
+    <div id="page-container" class="sc-db5b2b7d-0 ixxHTy">
+        <div class="sc-e69463ff-1 sc-447adc13-0 kxUaUi hzfufo">
+            <div class="sc-447adc13-1 XRuee">
+                <div class="sc-447adc13-2 cUrchp"><p class="sc-3f0debe1-3 sc-447adc13-3 gLMKAZ cHEtZT">인간의 발달</p>
+                    <button class="sc-447adc13-4 bubnSY">
+                        <svg width="100%" height="100%" viewBox="0 0 18 19" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.4375 9.52344C17.4375 14.1833 13.6599 17.9609 9 17.9609C4.3401 17.9609 0.5625 14.1833 0.5625 9.52344C0.5625 4.86353 4.3401 1.08594 9 1.08594C13.6599 1.08594 17.4375 4.86353 17.4375 9.52344Z"
+                                  stroke="#888888" stroke-width="1.125"></path>
+                            <path d="M7.875 4.01953H10.125L9.5618 11.8945H8.4368L7.875 4.01953Z" fill="#888888"></path>
+                            <path d="M9.9 14.032C9.9 14.5912 9.44669 15.0445 8.8875 15.0445C8.32831 15.0445 7.875 14.5912 7.875 14.032C7.875 13.4728 8.32831 13.0195 8.8875 13.0195C9.44669 13.0195 9.9 13.4728 9.9 14.032Z"
+                                  fill="#888888"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="sc-447adc13-5 flnmBc">
+                    <button font-weight="500" class="sc-a504c383-0 fXtrqt">나가기</button>
+                    <div class="sc-e69463ff-1 kxUaUi" style="margin-left: 16px;">
+                        <div class="sc-47c3c39-0 eTEWUM">
+                            <div class="sc-47c3c39-1 xgbfZ"><a href="/study/chapter/1884/1">
+                                <div class="sc-47c3c39-2 kLwbjJ">
+                                    <svg width="100%" height="100%" viewBox="0 0 24 24">
+                                        <path d="M16.255 22.732l-9.842-9.84a1.268 1.268 0 010-1.785l9.842-9.84a1.262 1.262 0 011.785 1.785l-8.949 8.947 8.943 8.948a1.26 1.26 0 11-1.779 1.784z"
+                                              fill="#787979"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                                <div class="sc-47c3c39-3 kzVqoK"><input type="text" inputmode="numeric" pattern="[0-9]*"
+                                                                        maxlength="3" class="sc-47c3c39-4 iXkPcf"
+                                                                        value="2">
+                                    <p class="sc-3f0debe1-3 gLMKAZ">/</p>
+                                    <p class="sc-47c3c39-5 bzByQG">2</p></div>
+                                <a href="/study/chapter/1884/2#">
+                                    <div class="sc-47c3c39-2 kLwbjJ">
+                                        <svg width="100%" height="100%" viewBox="0 0 24 24">
+                                            <path d="M6.961 22.733a1.267 1.267 0 010-1.785l8.951-8.95-8.951-8.945a1.262 1.262 0 011.785-1.785l9.836 9.841a1.249 1.249 0 01.227 1.476 1.2 1.2 0 01-.227.309l-9.836 9.841a1.264 1.264 0 01-1.785 0z"
+                                                  fill="#B5B5B5"></path>
+                                        </svg>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sc-e69463ff-0 sc-65f2da29-0 knePip dqeXGn">
+            <div class="sc-65f2da29-1 kzCNUQ">
+                <div class="sc-65f2da29-2 gzUyqQ"><p class="sc-65f2da29-3 bcKNUs">인간의 발달</p>
+                    <button class="sc-65f2da29-4 eEMiiy">
+                        <svg width="100%" height="100%" viewBox="0 0 18 19" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.4375 9.52344C17.4375 14.1833 13.6599 17.9609 9 17.9609C4.3401 17.9609 0.5625 14.1833 0.5625 9.52344C0.5625 4.86353 4.3401 1.08594 9 1.08594C13.6599 1.08594 17.4375 4.86353 17.4375 9.52344Z"
+                                  stroke="#888888" stroke-width="1.125"></path>
+                            <path d="M7.875 4.01953H10.125L9.5618 11.8945H8.4368L7.875 4.01953Z" fill="#888888"></path>
+                            <path d="M9.9 14.032C9.9 14.5912 9.44669 15.0445 8.8875 15.0445C8.32831 15.0445 7.875 14.5912 7.875 14.032C7.875 13.4728 8.32831 13.0195 8.8875 13.0195C9.44669 13.0195 9.9 13.4728 9.9 14.032Z"
+                                  fill="#888888"></path>
+                        </svg>
+                    </button>
+                </div>
+                <button class="sc-65f2da29-5 iMlnHB"><p class="sc-65f2da29-6 bHYVii">나가기</p>
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.9211 12.0881L9.91009 6.07812L8.49609 7.49213L13.0961 12.0921L8.49609 16.6851L9.91009 18.0991L15.9211 12.0881Z"
+                              fill="#333743"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="sc-c65f8075-0 eiapOV">
+            <div class="sc-95997a97-0 kwvVUl">
+                <div tabindex="0" class="sc-95997a97-1 kgDNHs">
+                    <div class="sc-36bd8e64-0 cNoGsm">
+                        <div class="sc-36bd8e64-1 iGTgim"><p class="sc-3f0debe1-6 sc-36bd8e64-3 bOUwZF iFMBtX">2번</p>
+                            <p class="sc-3f0debe1-6 sc-36bd8e64-3 bOUwZF iFMBtX">[KMLE17]</p>
+                            <button class="sc-36bd8e64-4 eYHmBi">
+                                <div class="sc-36bd8e64-6 dwxGSv">
+                                    <svg width="100%" height="100%" viewBox="0 0 24 24">
+                                        <path d="M20.852 11.324C18.538 7.964 15.026 6 11.998 6c-3.028 0-6.54 1.963-8.854 5.324A.736.736 0 0 0 3 11.72c0 .145.07.288.144.397 2.314 3.36 5.826 5.324 8.854 5.324 3.028 0 6.54-1.963 8.854-5.324a.737.737 0 0 0 .144-.397.737.737 0 0 0-.144-.397Zm-8.854 4.529a4.132 4.132 0 1 1 0-8.264 4.132 4.132 0 0 1 0 8.264Z"
+                                              fill="#464646"></path>
+                                        <path d="M14.78 11.72a2.781 2.781 0 1 1-5.563.001 2.781 2.781 0 0 1 5.562 0Z"
+                                              fill="#464646"></path>
+                                    </svg>
+                                </div>
+                                <p class="sc-36bd8e64-5 cUfyXh">1</p></button>
+                        </div>
+                        <div class="sc-36bd8e64-7 hvXdCV">
+                            <div class="sc-36bd8e64-8 hgXfpZ">
+                                <button class="sc-36bd8e64-9 bgKZqq">
+                                    <svg width="100%" height="100%" viewBox="0 0 37 37" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.3193 26.0078L26.29 11.0078M11.3047 11.0225L26.3047 25.9932"
+                                              stroke="#EF2B2A" stroke-width="2" stroke-linecap="round"></path>
+                                        <rect x="1.30469" y="1.00781" width="35" height="35" rx="9.5"
+                                              stroke="#EF2B2A"></rect>
+                                    </svg>
+                                </button>
+                                <button class="sc-36bd8e64-9 bgKZqq">
+                                    <svg width="100%" height="100%" viewBox="0 0 37 37" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="1.30469" y="1.00781" width="35" height="35" rx="9.5"
+                                              stroke="#787979"></rect>
+                                        <path d="M18.9041 19.3452H14.1017C13.9632 19.3456 13.8277 19.3045 13.7126 19.2274C13.5975 19.1502 13.5081 19.0405 13.4558 18.9122C13.4035 18.7839 13.3907 18.6429 13.419 18.5073C13.4473 18.3716 13.5155 18.2476 13.6148 18.1509H13.6103L20.9849 7.71094L19.6079 17.9538H24.2726C24.4022 17.9541 24.5292 17.9905 24.6391 18.059C24.7491 18.1276 24.8378 18.2254 24.8952 18.3416C24.9525 18.4578 24.9763 18.5877 24.9638 18.7167C24.9512 18.8457 24.9029 18.9686 24.8243 19.0716H24.8369L18.0932 29.8293L18.9041 19.3452Z"
+                                              fill="#787979"></path>
+                                    </svg>
+                                </button>
+                                <button class="sc-36bd8e64-9 bgKZqq">
+                                    <svg width="100%" height="100%" viewBox="0 0 37 37" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="1.30469" y="1.00781" width="35" height="35" rx="9.5"
+                                              stroke="#787979"></rect>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M9.80469 11.0078C9.80469 10.1794 10.4763 9.50781 11.3047 9.50781H24.8047C26.4615 9.50781 27.8047 10.851 27.8047 12.5078V26.0078C27.8047 26.8362 27.1331 27.5078 26.3047 27.5078H11.3047C10.4763 27.5078 9.80469 26.8362 9.80469 26.0078V11.0078ZM14.832 12.4578C14.832 12.0712 15.1454 11.7578 15.532 11.7578H22.0788C22.4654 11.7578 22.7788 12.0712 22.7788 12.4578V14.5578C22.7788 14.9444 22.4654 15.2578 22.0788 15.2578H15.532C15.1454 15.2578 14.832 14.9444 14.832 14.5578V12.4578ZM14.0047 17.2578C13.6181 17.2578 13.3047 17.5712 13.3047 17.9578V24.5578C13.3047 24.9444 13.6181 25.2578 14.0047 25.2578H23.6047C23.9913 25.2578 24.3047 24.9444 24.3047 24.5578V17.9578C24.3047 17.5712 23.9913 17.2578 23.6047 17.2578H14.0047Z"
+                                              fill="#787979"></path>
+                                    </svg>
+                                </button>
+                                <button class="sc-36bd8e64-9 bgKZqq">
+                                    <svg width="100%" height="100%" viewBox="0 0 37 37" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="1.30469" y="1.00781" width="35" height="35" rx="9.5"
+                                              stroke="#787979"></rect>
+                                        <path d="M26.0051 10.4062H11.6051C11.108 10.4062 10.7051 10.8092 10.7051 11.3063V25.7063C10.7051 26.2033 11.108 26.6063 11.6051 26.6063H26.0051C26.5021 26.6063 26.9051 26.2033 26.9051 25.7063V11.3063C26.9051 10.8092 26.5021 10.4062 26.0051 10.4062Z"
+                                              stroke="#787979" stroke-width="2"></path>
+                                        <path d="M15.2051 14.9062H18.8051" stroke="#787979" stroke-width="2"
+                                              stroke-linecap="round"></path>
+                                        <path d="M15.2051 18.5078H22.4051" stroke="#787979" stroke-width="2"
+                                              stroke-linecap="round"></path>
+                                        <path d="M15.2051 22.1094H20.6051" stroke="#787979" stroke-width="2"
+                                              stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="sc-36bd8e64-8 hgXfpZ">
+                                <button font-weight="500" class="sc-a504c383-0 edjKHs">해설 숨김</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sc-95997a97-2 RNLnj">
+                    <div id="pd">
+                        <div class="sc-55a68fa6-0 eOdQdY">
+                            <div class="sc-55a68fa6-3 hqwwZt block" style="text-align: start;">29세 여자가 1주일 전에 남자 친구와 헤어진
+                                후 우울하다고 병원에 왔다. 남자들로부터 관심을 받으려고 외모에 많은 신경을 썼고, 여러 남자와 사귀었지만 결혼 직전에 헤어지는 일이 잦았다고 하였다. 자신의
+                                미모 때문에 여자들은 자신을 질투하지만 남자들은 자신의 매력을 알아주고 자상하게 대해 준다고 자랑하였다. 이 사람의 인격 발달과 관련된 시기는?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sc-95997a97-3 eaAKna">
+                    <div class="sc-e1fad234-0 diwCQK">
+                        <button class="sc-9d43cb05-0 brrCEx">
+                            <div class="sc-9d43cb05-1 fWOtTw">
+                                <svg width="100%" height="100%" viewBox="0 0 48 48">
+                                    <circle cx="24" cy="24" r="15.5" fill="none" stroke="#ccc"></circle>
+                                </svg>
+                            </div>
+                            <div class="sc-9d43cb05-2 ggNBga">① 구강기</div>
+                            <div class="sc-9d43cb05-3 fyrAIG"></div>
+                        </button>
+                        <button class="sc-9d43cb05-0 brrCEx">
+                            <div class="sc-9d43cb05-1 fWOtTw">
+                                <svg width="100%" height="100%" viewBox="0 0 48 48">
+                                    <circle cx="16" cy="16" r="16" transform="translate(8 8)" fill="#464646"></circle>
+                                    <g fill="#fff">
+                                        <path d="M23.293 28.373a.44.44 0 01-.313-.128l-3.966-3.967a.445.445 0 010-.619.443.443 0 01.62.002l3.303 3.307.354.353.354-.353 5.95-5.952a.438.438 0 01.749.304.428.428 0 01-.13.309l-6.616 6.619a.43.43 0 01-.305.125z"></path>
+                                        <path d="M23.293 28.873c-.24 0-.48-.09-.664-.271l-3.969-3.97a.947.947 0 010-1.326.944.944 0 011.326 0l3.305 3.308 5.951-5.952a.938.938 0 011.326 0 .93.93 0 010 1.321l-6.617 6.619a.931.931 0 01-.658.271z"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="sc-9d43cb05-2 kOrVcZ">② 남근기</div>
+                            <div class="sc-9d43cb05-3 fyrAIG"></div>
+                        </button>
+                        <button class="sc-9d43cb05-0 brrCEx">
+                            <div class="sc-9d43cb05-1 fWOtTw">
+                                <svg width="100%" height="100%" viewBox="0 0 48 48">
+                                    <circle cx="24" cy="24" r="15.5" fill="none" stroke="#ccc"></circle>
+                                </svg>
+                            </div>
+                            <div class="sc-9d43cb05-2 ggNBga">③ 성기기</div>
+                            <div class="sc-9d43cb05-3 fyrAIG"></div>
+                        </button>
+                        <button class="sc-9d43cb05-0 brrCEx">
+                            <div class="sc-9d43cb05-1 fWOtTw">
+                                <svg width="100%" height="100%" viewBox="0 0 48 48">
+                                    <circle cx="24" cy="24" r="15.5" fill="none" stroke="#ccc"></circle>
+                                </svg>
+                            </div>
+                            <div class="sc-9d43cb05-2 ggNBga">④ 잠재기</div>
+                            <div class="sc-9d43cb05-3 fyrAIG"></div>
+                        </button>
+                        <button class="sc-9d43cb05-0 brrCEx">
+                            <div class="sc-9d43cb05-1 fWOtTw">
+                                <svg width="100%" height="100%" viewBox="0 0 48 48">
+                                    <circle cx="24" cy="24" r="15.5" fill="none" stroke="#ccc"></circle>
+                                </svg>
+                            </div>
+                            <div class="sc-9d43cb05-2 ggNBga">⑤ 항문기</div>
+                            <div class="sc-9d43cb05-3 fyrAIG"></div>
+                        </button>
+                        <p class="sc-3f0debe1-5 sc-e1fad234-1 eHUKQk kwffRP">오답입니다.</p></div>
+                </div>
+                <div class="sc-95997a97-4 hvYcSq">
+                    <div id="ps">
+                        <div class="sc-55a68fa6-0 eOdQdY">
+                            <div>
+                                <div class="sc-55a68fa6-3 hqwwZt block" style="text-align: start;">해설</div>
+                                <div class="sc-55a68fa6-3 hqwwZt block" style="text-align: start;">• 우울감을 주소로 병원에 온 29세
+                                    여자의 증례이다. 해당 여성은 남성과는 가까이 지내고 여성은 적대시하는 성격을 가지고 있다. 남근기의 여자아이는 <strong>아버지와 가까워지고
+                                        어머니를 적대하는 일렉트라 콤플렉스</strong>를 보인다. 따라서 해당 여성의 인격 발달과 관련된 시기는 남근기이다.
+                                </div>
+                                <div class="sc-55a68fa6-3 hqwwZt block" style="text-align: start;">• 외모에 많은 신경을 쓰고, 여러
+                                    남자를 만났으나 결혼 직전에 헤어지는 일, 외모에 대한 자랑 등 연극성 성격장애에 해당하는 과거력도 보이고 있다. 정신분석적 해석으로는 연극성
+                                    성격장애는 남근기의 고착으로 인해 발생한다.<span class="color"><br></span></div>
+                                <div class="sc-55a68fa6-3 hqwwZt block" style="text-align: start;">Tip</div>
+                                <div class="sc-55a68fa6-3 hqwwZt block" style="text-align: start;">• <span
+                                        style="color: rgb(128, 0, 255); text-decoration: underline; cursor: pointer;">인간 정신 발달표</span>
+                                </div>
+                                <div class="sc-55a68fa6-3 hqwwZt block" style="text-align: start;"></div>
+                                <div class="sc-55a68fa6-3 hqwwZt block" style="text-align: start;">관련 이론</div>
+                                <div class="sc-55a68fa6-3 hqwwZt block" style="text-align: start;">• <a
+                                        href="/study/theory/4430"
+                                        style="color: rgb(0, 192, 208); text-decoration: underline;">인간의 발달</a></div>
+                                <div class="sc-55a68fa6-3 hqwwZt block" style="text-align: start;">• <a
+                                        href="/study/theory/4422"
+                                        style="color: rgb(0, 192, 208); text-decoration: underline;">성격장애</a></div>
+                                <div class="sc-55a68fa6-3 hqwwZt block" style="text-align: start;"></div>
+                                <div class="sc-55a68fa6-3 hqwwZt block" style="text-align: start;">Reference</div>
+                                <div class="sc-55a68fa6-3 hqwwZt block" style="text-align: start;">• 신경정신의학 3e,
+                                    pp.57~91
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sc-e8cb433a-0 GvSLn">
+                    <div class="sc-39c9f037-0 hWBGZa">
+                        <div class="sc-39c9f037-2 gGHjFH"><p class="sc-39c9f037-1 bsALWG">커뮤니티 Q&amp;A</p>
+                            <div class="sc-4eca1217-0 gZOeqk">
+                                <div class="sc-4eca1217-1 bOJLYt">
+                                    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 23C5.95 23 1 18.05 1 12S5.95 1 12 1s11 4.95 11 11-4.95 11-11 11zm0-20.167c-5.042 0-9.167 4.125-9.167 9.167S6.958 21.167 12 21.167s9.167-4.125 9.167-9.167S17.042 2.833 12 2.833zm0 11c-.55 0-.917-.366-.917-.916V6.5c0-.55.367-.917.917-.917s.917.367.917.917v6.417a.919.919 0 01-.917.916zm0 1.742c.55 0 1.008.458 1.008 1.008S12.55 17.592 12 17.592s-1.008-.459-1.008-1.009c0-.55.458-1.008 1.008-1.008z"
+                                              fill="#CCCCCC"></path>
+                                    </svg>
+                                </div>
+                                <div class="sc-4eca1217-2 gKnBuI"><p class="sc-4eca1217-3 caCMbD">관련된 게시글 입니다.</p></div>
+                            </div>
+                        </div>
+                        <div class="sc-39c9f037-3 ikPXwp"></div>
+                    </div>
+                    <div class="sc-51a65a5b-1 kpqqVd"><p class="sc-51a65a5b-2 fbEPVa">이해가 안 되거나 궁금한 점이 있다면 <span>커뮤니티에 질문</span>해
+                        보세요!</p>
+                        <button class="sc-a504c383-0 eBcFcg">게시글 작성하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sc-c65f8075-1 gKPVtC">
+            <div class="sc-47c3c39-0 eTEWUM">
+                <div class="sc-47c3c39-1 xgbfZ"><a href="/study/chapter/1884/1">
+                    <div class="sc-47c3c39-2 kLwbjJ">
+                        <svg width="100%" height="100%" viewBox="0 0 24 24">
+                            <path d="M16.255 22.732l-9.842-9.84a1.268 1.268 0 010-1.785l9.842-9.84a1.262 1.262 0 011.785 1.785l-8.949 8.947 8.943 8.948a1.26 1.26 0 11-1.779 1.784z"
+                                  fill="#787979"></path>
+                        </svg>
+                    </div>
+                </a>
+                    <div class="sc-47c3c39-3 kzVqoK"><input type="text" inputmode="numeric" pattern="[0-9]*"
+                                                            maxlength="3" class="sc-47c3c39-4 iXkPcf" value="2">
+                        <p class="sc-3f0debe1-3 gLMKAZ">/</p>
+                        <p class="sc-47c3c39-5 bzByQG">2</p></div>
+                    <a href="/study/chapter/1884/2#">
+                        <div class="sc-47c3c39-2 kLwbjJ">
+                            <svg width="100%" height="100%" viewBox="0 0 24 24">
+                                <path d="M6.961 22.733a1.267 1.267 0 010-1.785l8.951-8.95-8.951-8.945a1.262 1.262 0 011.785-1.785l9.836 9.841a1.249 1.249 0 01.227 1.476 1.2 1.2 0 01-.227.309l-9.836 9.841a1.264 1.264 0 01-1.785 0z"
+                                      fill="#B5B5B5"></path>
+                            </svg>
+                        </div>
+                    </a></div>
+            </div>
+        </div>
+    </div>
+    <div class="sc-e0f92e88-1 eqEHmI"></div>
+    <div class="sc-e0f92e88-0 vuRyY">
+        <button class="sc-e0f92e88-2 dCigmX">
+            <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.322 3.69314L20.3215 3.69261C19.939 3.31009 19.3188 3.31009 18.9363 3.69261L3.69355 18.9354C3.31103 19.3179 3.31103 19.9381 3.69355 20.3206L3.69408 20.3211C4.0766 20.7036 4.69678 20.7036 5.0793 20.3211L20.322 5.07836C20.7046 4.69584 20.7046 4.07566 20.322 3.69314Z"
+                      fill="#222222"></path>
+                <path d="M20.3205 20.3201L20.3211 20.3196C20.7036 19.937 20.7036 19.3169 20.3211 18.9343L5.07831 3.6916C4.6958 3.30908 4.07561 3.30908 3.69309 3.6916L3.69256 3.69213C3.31004 4.07464 3.31004 4.69483 3.69256 5.07735L18.9353 20.3201C19.3178 20.7026 19.938 20.7026 20.3205 20.3201Z"
+                      fill="#222222"></path>
+            </svg>
+        </button>
+    </div>
+</div>
+<script id="__NEXT_DATA__" type="application/json">{
+    "props": {
+        "pageProps": {},
+        "apiBaseURL": "https://api.allenslibrary.com/community/graphql",
+        "apolloState": {}
+    },
+    "page": "/study",
+    "query": {},
+    "buildId": "Ar9W_m38o_t0E2T8SdRVS",
+    "isFallback": false,
+    "appGip": true,
+    "scriptLoader": [
+        {
+            "strategy": "afterInteractive",
+            "dangerouslySetInnerHTML": {
+                "__html": "\n                (function() {\n                  var w = window;\n                  if (w.ChannelIO) {\n                    return (window.console.error || window.console.log || function(){})('ChannelIO script included twice.');\n                  }\n                  var ch = function() {\n                    ch.c(arguments);\n                  };\n                  ch.q = [];\n                  ch.c = function(args) {\n                    ch.q.push(args);\n                  };\n                  w.ChannelIO = ch;\n                  function l() {\n                    if (w.ChannelIOInitialized) {\n                      return;\n                    }\n                    w.ChannelIOInitialized = true;\n                    var s = document.createElement('script');\n                    s.type = 'text/javascript';\n                    s.async = true;\n                    s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';\n                    s.charset = 'UTF-8';\n                    var x = document.getElementsByTagName('script')[0];\n                    x.parentNode.insertBefore(s, x);\n                  }\n                  if (document.readyState === 'complete') {\n                    l();\n                  } else if (window.attachEvent) {\n                    window.attachEvent('onload', l);\n                  } else {\n                    window.addEventListener('DOMContentLoaded', l, false);\n                    window.addEventListener('load', l, false);\n                  }\n                })();\n              "
+            }
+        },
+        {
+            "strategy": "afterInteractive",
+            "dangerouslySetInnerHTML": {
+                "__html": "\n                !function(f,b,e,v,n,t,s)\n                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n                n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n                n.queue=[];t=b.createElement(e);t.async=!0;\n                t.src=v;s=b.getElementsByTagName(e)[0];\n                s.parentNode.insertBefore(t,s)}(window, document,'script',\n                'https://connect.facebook.net/en_US/fbevents.js');\n                fbq('init', '1020445865285795');\n                fbq('track', 'PageView');\n              "
+            }
+        }
+    ]
+}</script>
+<script data-nscript="afterInteractive">
+    </script>
+</body>
+</html>
