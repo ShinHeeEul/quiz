@@ -67,11 +67,13 @@ body{
 }
 
 #move_right {
-    width: 45%;
+    max-width: 40%;
+    height: auto;
     float: right;
 }
 #move_left {
-    width: 45%;
+    max-width: 40%;
+    height: auto;
     float: left;
 }
 
@@ -160,4 +162,9 @@ nav{
   float: left;
   padding: 0 30px;
   line-height: 80px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

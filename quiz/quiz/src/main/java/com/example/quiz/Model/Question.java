@@ -1,4 +1,4 @@
-package com.example.quiz.Dao;
+package com.example.quiz.Model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

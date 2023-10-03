@@ -1,10 +1,9 @@
 package com.example.quiz.Controller;
 
 
-import com.example.quiz.Dao.Question;
-import com.example.quiz.Dao.SmallCategory;
-import com.example.quiz.Repository.QuestionRepository;
-import com.example.quiz.Repository.SmallCategoryRepository;
+import com.example.quiz.Model.Question;
+import com.example.quiz.Model.SmallCategory;
+import com.example.quiz.Service.QuestionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,13 +19,12 @@ import java.util.Optional;
 @RequestMapping("/quiz")
 public class QuizController {
 
-    private final QuestionRepository questionRepository;
-    private final SmallCategoryRepository smallCategoryRepository;
+    private final QuestionService questionService;
 
     @GetMapping("/{big}/{small}/{id}")
     public String showQuiz(@PathVariable Long big, @PathVariable Long small, @PathVariable Long id, Model model) {
-        List<Question> questions = questionRepository.findBySmallCategory_Id(small);
-        Optional<SmallCategory> smallCategory = smallCategoryRepository.findById(small);
+        List<Question> questions = questionService.getQuestionsBySmall(small);
+        //SmallCategory smallCategory = questionService.getSmallCategoryById(small);
         Question question = questions.get(Math.toIntExact(id-1));
 
         Long next = (id < questions.size())?id + 1:-1;
