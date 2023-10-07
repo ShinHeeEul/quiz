@@ -19,7 +19,4 @@ public class BigCategory {
     private Long id;
 
     private String name;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "big_category_id")
-    private BigCategory bigCategory;
 }

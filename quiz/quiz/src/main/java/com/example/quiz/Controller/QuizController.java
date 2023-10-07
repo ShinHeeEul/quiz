@@ -2,7 +2,6 @@ package com.example.quiz.Controller;
 
 
 import com.example.quiz.Model.Question;
-import com.example.quiz.Model.SmallCategory;
 import com.example.quiz.Service.QuestionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
-import java.util.Optional;
 
 @Controller
 @RequiredArgsConstructor
@@ -24,7 +22,6 @@ public class QuizController {
     @GetMapping("/{big}/{small}/{id}")
     public String showQuiz(@PathVariable Long big, @PathVariable Long small, @PathVariable Long id, Model model) {
         List<Question> questions = questionService.getQuestionsBySmall(small);
-        //SmallCategory smallCategory = questionService.getSmallCategoryById(small);
         Question question = questions.get(Math.toIntExact(id-1));
 
         Long next = (id < questions.size())?id + 1:-1;
@@ -43,9 +40,6 @@ public class QuizController {
         return "quiz";
     }
 
-    //해설 추가
-
     //랜덤 문제 추출
 
-    //문제 추가 api
 }

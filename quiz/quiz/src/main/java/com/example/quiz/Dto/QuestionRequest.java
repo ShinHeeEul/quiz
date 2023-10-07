@@ -2,16 +2,18 @@ package com.example.quiz.Dto;
 
 
 import lombok.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @NoArgsConstructor
 @Builder
+@Setter
 @Getter
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class QuestionRequestDto {
+public class QuestionRequest {
     private String question;
-    private String questionImg;
+    private MultipartFile questionImg;
     private String[] selection;
     private String solution;
-    private String solutionImg;
+    private MultipartFile solutionImg;
 
 }
