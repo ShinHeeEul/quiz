@@ -4,14 +4,71 @@
       layout:decorate="layout/default_layout">
 <body>
 <th:block layout:fragment="content">
+
   <div class="context_container" id=>
-    <div class="content_container">
-      <h2 id="question">문제 추가</h2>
-      <form method="post" action="/add">
-        
+      <form method="post" action="/add"  enctype="multipart/form-data">
+        <div class="content_container">
+          <h2>문제 추가</h2>
+        <h3>질문</h3>
+          <textarea id = "question" name = "question"> 문제) </textarea>
+
+        <h3>질문 이미지</h3>
+        <div class="filebox">
+          <input class="upload-name" id="question_upload" value="첨부파일" placeholder="첨부파일">
+          <label for="questionImg">파일찾기</label>
+          <input type="file" id="questionImg" name="questionImg">
+        </div>
+
+        <h3>선택지</h3>
+          <input type="button" value="추가" onclick="add_textbox()">
+          <input type="button" value="삭제" onclick="remove()">
+        <div id = "box">
+        </div>
+
+        <h3>해설</h3>
+        <textarea id = "solution" name="solution"> 정답) </textarea>
+
+        <h3>해설 이미지</h3>
+        <div class="filebox">
+          <input class="upload-name" id="solution_upload" value="첨부파일" placeholder="첨부파일">
+          <label for="solutionImg">파일찾기</label>
+          <input type="file" id="solutionImg" name="solutionImg">
+        </div>
+
+        <br>
+        <br>
+        </div>
+        <div>
+        <button id="add_question" type="submit">문제 추가</button>
+        </div>
       </form>
     </div>
   </div>
+
+  <script type="text/javascript">
+    document.getElementById("questionImg").addEventListener('change', (e) => {
+    let fileName = document.getElementById("questionImg").value;
+    document.getElementById("question_upload").value = fileName;
+   });
+   document.getElementById("solutionImg").addEventListener('change', (e) => {
+    let fileName = document.getElementById("solutionImg").value;
+    document.getElementById("solution_upload").value = fileName;
+   });
+   const add_textbox = () => {
+            const box = document.getElementById("box");
+            const newP = document.createElement('p');
+            newP.className = 'selection_input';
+            newP.innerHTML = "<input type='text' name='selection'>";
+            box.appendChild(newP);
+        }
+   const remove = () => {
+            const box = document.getElementById("box");
+            const oldP = box.querySelector('.selection_input');
+            box.removeChild(oldP);
+        }
+  </script>
+
+
 </th:block>
 </body>
 </html>

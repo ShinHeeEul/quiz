@@ -7,8 +7,12 @@
 <th:block layout:fragment="content">
     <div class="quiz_container" id=>
         <div>
-            <button id="move_left" th:if="${prev != -1}" th:onclick="|location.href='/quiz/${big}/${small}/${prev}'|">이전으로</button>
-            <button id="move_right" th:if="${next != -1}" th:onclick="|location.href='/quiz/${big}/${small}/${next}'|">다음으로</button>
+            <button id="move_left" th:if="${prev != -1}" th:onclick="|location.href='/quiz/${big}/${small}/${prev}'|">
+                이전으로
+            </button>
+            <button id="move_right" th:if="${next != -1}" th:onclick="|location.href='/quiz/${big}/${small}/${next}'|">
+                다음으로
+            </button>
         </div>
         <br/>
         <br/>
@@ -16,6 +20,7 @@
             <h2 id="question" th:text="${num}">번호</h2>
             <h3 th:text="${code}">코드</h3>
             <div th:utext="${question}">질문</div>
+
             <div th:utext="${selection}">선택지</div>
             <details>
                 <summary id="answer">해설 보기</summary>
