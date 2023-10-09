@@ -26,6 +26,12 @@
                 <summary id="answer">해설 보기</summary>
                 <div th:utext="${solution}">해설</div>
             </details>
+            <form action="#" th:if="${#strings.equals(code, '[MINE]')}" th:action="@{'/quiz/{id}'(id=${id})}"
+                  th:method="delete">
+                <input type="hidden" name="_method" value="delete"/>
+                <button id="remove" type="submit">문제 제거</button>
+            </form>
+            <!--<button id="remove"  th:onclick="|location.href='/quiz/${id}'|" th:method="DELETE">문제 제거</button>-->
         </div>
     </div>
 </th:block>

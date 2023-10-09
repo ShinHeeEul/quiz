@@ -6,9 +6,7 @@ import com.example.quiz.Service.QuestionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,11 +25,12 @@ public class QuizController {
         Long next = (id < questions.size())?id + 1:-1;
         Long prev = (id > 1)?id-1:-1;
 
+        model.addAttribute("id", question.getId());
         model.addAttribute("big", big);
         model.addAttribute("small", small);
         model.addAttribute("prev", prev);
         model.addAttribute("next", next);
-        model.addAttribute("num", question.getNum());
+        model.addAttribute("num", id + "번");
         model.addAttribute("code", question.getCode());
         model.addAttribute("question",question.getQuestion());
         model.addAttribute("selection", question.getSelection());
@@ -39,7 +38,38 @@ public class QuizController {
 
         return "quiz";
     }
+    @DeleteMapping("/{id}")
+    public String removeQuiz(@PathVariable Long id) {
+        questionService.remove(id);
+        return "redirect:/";
+    }
 
-    //랜덤 문제 추출
+    //todo: 랜덤 문제 추출
+
+    @GetMapping("/random")
+    public String createRandomQuiz() {
+        return "create_random";
+    }
+
+    @PostMapping("/random")
+    public String showRandomQuiz() {
+        /*List<Question> questions = questionService.getQuestionsBySmall(small);
+        Question question = questions.get(Math.toIntExact(id-1));
+
+        Long next = (id < questions.size())?id + 1:-1;
+        Long prev = (id > 1)?id-1:-1;
+
+        model.addAttribute("id", question.getId());
+        model.addAttribute("big", big);
+        model.addAttribute("small", small);
+        model.addAttribute("prev", prev);
+        model.addAttribute("next", next);
+        model.addAttribute("num", id + "번");
+        model.addAttribute("code", question.getCode());
+        model.addAttribute("question",question.getQuestion());
+        model.addAttribute("selection", question.getSelection());
+        model.addAttribute("solution", question.getSolution());*/
+        return "redirect:/";
+    }
 
 }

@@ -37,6 +37,18 @@ body{
     text-align: center;
 }
 
+#remove {
+    width:100%;
+    background-color: #1b2035;
+    color: white;
+    font-family: inherit;
+    display: block;
+    padding : 1.3rem;
+    border: none;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
 #add_question {
 width:100%;
     background-color: #1b2035;
@@ -127,7 +139,8 @@ button{
     display: block;
     padding : 1.3rem;
     border: none;
-    margin: 1.1rem;
+    margin-top: 1.1rem;
+    margin-bottom: 1.1rem;
     font-size: 1.1rem;
 }
 button:hover{

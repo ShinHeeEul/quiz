@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/default_layout">
+<body>
+<th:block layout:fragment="content">
+
+  <div class="context_container" id=>
+      <form method="get" action="/">
+        <div class="content_container">
+          <h2>랜덤 문제 추출</h2>
+
+        <h3>범위</h3>
+          <input type="button" value="추가" onclick="add_textbox()">
+          <input type="button" value="삭제" onclick="remove()">
+
+        <div id = "box">
+        </div>
+
+        <br>
+        <br>
+        </div>
+        <div>
+        <button id="add_question" type="submit">랜덤 문제 생성</button>
+        </div>
+      </form>
+    </div>
+  <script type="text/javascript">
+   const add_textbox = () => {
+            const box = document.getElementById("box");
+            const newP = document.createElement('p');
+            newP.className = 'selection_input';
+            newP.innerHTML = "<input type='text' name='selection'> <input value='비율'>";
+            box.appendChild(newP);
+        }
+   const remove = () => {
+            const box = document.getElementById("box");
+            const oldP = box.querySelector('.selection_input');
+            box.removeChild(oldP);
+        }
+  </script>
+
+
+</th:block>
+</body>
+</html>
