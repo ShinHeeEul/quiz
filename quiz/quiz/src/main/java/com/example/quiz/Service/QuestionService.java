@@ -2,7 +2,6 @@ package com.example.quiz.Service;
 
 import com.example.quiz.Model.Question;
 import com.example.quiz.Model.SmallCategory;
-import com.example.quiz.QuestionFormat;
 import com.example.quiz.Repository.QuestionRepository;
 import com.example.quiz.Repository.SmallCategoryRepository;
 import lombok.RequiredArgsConstructor;
@@ -33,5 +32,9 @@ public class QuestionService {
 
     public void add(Question question) {
         questionRepository.save(question);
+    }
+
+    public void remove(Long id) {
+        questionRepository.deleteById(id);
     }
 }
