@@ -238,11 +238,8 @@ textarea {
 table {
   border-collapse: collapse;
   border: 0;
-}
-
-table.txc-table {
-    width: 100%;
-    table-layout: fixed;
+  width: 100%;
+  table-layout: fixed;
 }
 
 table thead tr {
